@@ -18,7 +18,7 @@ export async function get() {
         if (!list) return ""
         let blocks = []
         for (const [setN, set] of Object.entries(groupBy(list, 'set_number'))) {
-            let block = `Set ${setN}\n${set.map(s => s.name).join('\n')}`
+            let block = `Set ${setN}\n${set.map(s => s.name).join('\n\n')}`
             blocks.push(block)
         }
 
